@@ -84,19 +84,6 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-            
-            <div className="mt-8 flex space-x-4">
-              {['twitter', 'linkedin', 'dribbble', 'instagram'].map((platform) => (
-                <a 
-                  key={platform}
-                  href="#" 
-                  className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-gray-600 hover:text-primary hover:bg-secondary/80 transition-colors"
-                >
-                  <span className="sr-only">{platform}</span>
-                  <i className={`fab fa-${platform}`}></i>
-                </a>
-              ))}
-            </div>
           </div>
           
           <div className="md:col-span-3">
