@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Instagram, Linkedin  } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -24,6 +24,18 @@ const Contact = () => {
       title: "Lokasi",
       value: "Bogor, Jawa Barat, Indonesia",
       link: "https://maps.app.goo.gl/ypX7b4G4zW9vpRcf8"
+    },
+    {
+      icon: <Instagram className="h-5 w-5" />,
+      title: "Instagram",
+      value: "@ccellynur",
+      link: "https://www.instagram.com/ccellynur"
+    },
+    {
+      icon: <Linkedin className="h-5 w-5" />,
+      title: "LinkedIn",
+      value: "Celly Nurhaliza",
+      link: "https://www.linkedin.com/in/celly-nurhaliza-5554a6270/"
     }
   ];
 
