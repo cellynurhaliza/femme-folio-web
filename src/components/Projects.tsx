@@ -4,52 +4,79 @@ import { Briefcase } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('semua');
   
-  const filters = ['all', 'web design', 'mobile app', 'branding'];
+  const filters = ['semua', 'web developer', 'data analyst', 'game developer'];
   
   const projects = [
     {
-      title: "E-commerce Redesign",
-      category: "web design",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80",
-      description: "Redesign antarmuka pengguna untuk platform e-commerce dengan fokus pada pengalaman mobile."
+      title: "TestingTool Arqa",
+      category: "Front End Developer",
+      type: "web developer",
+      image: "/img/arqa.png",
+      description: "TestingTool Arqa adalah sebuah website dinamis tentang data data bank yang di buat sebagai tugas akhir praktik kerja lapangan (PKL). Website ini dibuat menggunakan AngularTS."
     },
     {
-      title: "Aplikasi Finansial",
-      category: "mobile app",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80",
-      description: "Desain dan pengembangan aplikasi finansial untuk membantu pengguna mengelola keuangan."
+      title: "Berkah Tirta Alam (BETA)",
+      category: "Back End Developer",
+      type: "web developer",
+      image: "/img/beta.png",
+      description: "BETA adalah sebuah website dinamis yang berfungsi untuk melihat data data pelanggan mengenai pembayaran air. Website ini dibuat menggunakan Laravel dan PostgreSQL."
     },
     {
-      title: "Rebrand Corporate",
-      category: "branding",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80",
-      description: "Proyek rebranding untuk perusahaan teknologi yang sedang berkembang."
+      title: "Plant Culture",
+      category: "Front End Developer",
+      type: "web developer",
+      image: "/img/pc.png",
+      description: "Plant Culture website adalah sebuah website statis restoran makanan vegan yang dibuat untuk memesan makanan. Website ini dibuat menggunakan AngularTS dan Tailwind."
     },
     {
-      title: "Aplikasi Pembelajaran",
-      category: "web design",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80",
-      description: "Platform pembelajaran online dengan fitur interaktif dan gamifikasi."
+      title: "Website Kasir",
+      category: "Full Stack Developer",
+      type: "web developer",
+      image: "/img/kasir.png",
+      description: "Sistem ini merupakan aplikasi web penjualan berbasis Laravel yang digunakan untuk mencatat dan memantau transaksi penjualan harian. Terdapat dua jenis pengguna dalam sistem ini, yaitu admin dan employee (karyawan). Setiap pengguna dapat login menggunakan email dan password yang telah didaftarkan sebelumnya. "
     },
     {
-      title: "Dashboard Analytics",
-      category: "web design",
-      image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80",
-      description: "Dashboard analitik yang komprehensif untuk visualisasi data bisnis."
+      title: "Math Adventure",
+      category: "Game Developer",
+      type: "game developer",
+      image: "/img/math-adventure.png",
+      description: "Math Adventure adalah game edukasi di mana pemain bertujuan mengumpulkan skor sebanyak mungkin dengan menjawab soal matematika. Skor digunakan untuk membuka level berikutnya. Pemain juga harus melewati rintangan dan menyelesaikan misi."
     },
     {
-      title: "App Mobile Banking",
-      category: "mobile app",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80",
-      description: "Aplikasi mobile banking dengan fokus pada keamanan dan kemudahan penggunaan."
+      title: "Website Masjid",
+      category: "Front End Developer",
+      type: "web developer",
+      image: "/img/wakaf.png",
+      description: "Website Masjid adalah sebuah website statis yang dibuat untuk memberikan wakaf pada masjid tersebut. Website ini dibuat menggunakan HTML, CSS"
+    },
+    {
+      title: "Sistem Pengelolaan Surat",
+      category: "Full Stack Developer",
+      type: "web developer",
+      image: "/img/surat.png",
+      description: "Website ini merupakan aplikasi berbasis web yang digunakan untuk mengelola data surat dan data pengguna pada suatu instansi, seperti sekolah atau kantor. Website ini digunakan menggunakan Laravel dan MySql."
+    },
+    {
+      title: "Absensi Sholat Jumat",
+      category: "Front End Developer",
+      type: "web developer",
+      image: "/img/absensi.png",
+      description: "Aplikasi ini dibuat untuk mencatat kehadiran siswa dalam ibadah Sholat Jumat secara digital di lingkungan SMK Wikrama Bogor. Dengan sistem ini, pemantauan kehadiran menjadi lebih akurat, efisien, dan terdokumentasi dengan baik."
+    },
+    {
+      title: "K-Means Clustering",
+      category: "Data Analyst",
+      type: "data analyst",
+      image: "/img/k-mean.png",
+      description: "Saya telah menyelasaikan final project saat mengikuti bootcamp dari SRC Telkom Indonesia x Sanbercode. Saya menerapkan K-Means Clustering, negara dikelompokkan ke dalam beberapa klaster berdasarkan tingkat perkembangan sosial-ekonomi dan kesehatannya."
     },
   ];
 
-  const filteredProjects = activeFilter === 'all' 
+  const filteredProjects = activeFilter === 'semua' 
     ? projects 
-    : projects.filter(project => project.category === activeFilter);
+    : projects.filter(project => project.type === activeFilter);
 
   return (
     <section id="projects" className="section-padding bg-white">
@@ -90,7 +117,7 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-5">

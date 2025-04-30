@@ -5,37 +5,37 @@ import { FileText } from 'lucide-react';
 const Resume = () => {
   const education = [
     {
-      degree: "Sarjana Teknik Informatika",
-      institution: "Universitas Indonesia",
-      period: "2015 - 2019",
-      description: "Lulus dengan predikat cum laude dengan fokus pada pengembangan web dan desain interaksi."
-    },
-    {
-      degree: "Master UI/UX Design",
-      institution: "Digital Design Academy",
-      period: "2019 - 2020",
-      description: "Fokus pada desain pengalaman pengguna, riset, dan prototyping."
+      degree: "Pengembangan Perangkat Lunak dan Gim ",
+      institution: "SMK Wikrama Bogor",
+      period: "2022 - 2025",
+      description: "Di sini saya mempelajari dasar-dasar pemrograman, pengembangan aplikasi, desain antarmuka, serta manajemen proyek perangkat lunak. Pendidikan ini membentuk fondasi kuat dalam keterampilan teknis dan problem solving yang saya miliki saat ini."
     }
   ];
 
   const experience = [
     {
-      position: "Senior UI/UX Designer",
-      company: "Tech Innovate",
-      period: "2022 - Sekarang",
-      description: "Memimpin tim desain untuk mengembangkan produk digital dengan fokus pada pengalaman pengguna. Berkolaborasi dengan tim pengembangan untuk memastikan implementasi desain yang akurat."
+      position: "Front End Developer",
+      company: "PT Hexaon Business Mitrasindo",
+      period: "Jan 2024 - Jun 2024",
+      description: "Saya telah menyelesaikan magang di PT. Hexaon Business Mitrasindo selama 6 bulan. Pengalaman berharga ini telah mengasah keterampilan saya dan memberikan wawasan mendalam tentang industri. Saya telah membuat website mengenai transaksi antar bank menggunakan AngularTS."
     },
     {
-      position: "Frontend Developer",
-      company: "Digital Solutions",
-      period: "2020 - 2022",
-      description: "Mengembangkan antarmuka pengguna yang responsif menggunakan React dan Tailwind CSS. Berkolaborasi dengan tim desain untuk menerjemahkan mockup ke dalam kode yang berfungsi."
+      position: "Back End Developer",
+      company: "Berkah Tirta Alam",
+      period: "Jul 2024 - Des 2024",
+      description: "Dengan menyelesaikan project work selama 6 bulan Berkah Tirta Alam, saya memperoleh pengalaman praktis yang memperdalam keterampilan dan pemahaman saya dalam bidang industri. Saya telah membuat website dinamis yang berfungsi untuk melihat data data pelanggan mengenai pembayaran air. Website ini dibuat menggunakan Laravel dan PostgreSQL."
     },
     {
-      position: "UI/UX Designer",
-      company: "Creative Agency",
-      period: "2019 - 2020",
-      description: "Merancang antarmuka pengguna untuk berbagai klien dari berbagai industri. Melakukan pengujian pengguna dan mengimplementasikan peningkatan berdasarkan umpan balik."
+      position: "Social Media Manager",
+      company: "Freelance",
+      period: "Okt 2024 - Des 2024",
+      description: "Sebagai Social Media, Data Entry, dan Account Management diperusahaan individu, saya bertanggung jawab untuk mengelola engagement di media sosial dengan merespons komentar, mention, dan pesan untuk menjaga interaksi positif dengan audiens. Saya mampu bekerja sama dalam tim dan lingkungan baru dan saya mampu membagi waktu untuk bekerja dan bersekolah."
+    },
+    {
+      position: "Teknik Kepramukaan",
+      company: "Organisasi Dewan Ambalan SMK Wikrama Bogor",
+      period: "2023 - 2024",
+      description: "Dewan Ambalan adalah organisasi yang menjadi motor penggerak kegiatan kepramukaan di tingkat ambalan pramuka penegak. Di Dewan Ambalan saya memiliki posisi sebagai Koordinator Teknik Kepramukaan (Tekpram), tugas utamanya adalah memastikan pelaksanaan teknis kegiatan kepramukaan berjalan lancar dan sesuai rencana. Saya pun sudah pernah mengikuti beberapa lomba kepramukaan dan mengikuti beberapa kepanitiaan di organisasi ini."
     }
   ];
 

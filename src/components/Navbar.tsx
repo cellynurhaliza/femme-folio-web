@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center px-4 md:px-6">
         <a href="#" className="text-xl md:text-2xl font-lora font-semibold text-gradient">
-          Portfolio
+          cellynur
         </a>
 
         {/* Desktop Navigation */}

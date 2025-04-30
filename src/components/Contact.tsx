@@ -10,20 +10,20 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      value: "email@example.com",
-      link: "mailto:email@example.com"
+      value: "nurhalizacelly@gmail.com",
+      link: "mailto:nurhalizacelly@gmail.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Telepon",
-      value: "+62 812 3456 7890",
-      link: "tel:+6281234567890"
+      value: "+62 831-5361-0775",
+      link: "tel:+6283153610775"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Lokasi",
-      value: "Jakarta, Indonesia",
-      link: "https://maps.google.com/?q=Jakarta,Indonesia"
+      value: "Bogor, Jawa Barat, Indonesia",
+      link: "https://maps.app.goo.gl/ypX7b4G4zW9vpRcf8"
     }
   ];
 
@@ -48,7 +48,7 @@ const Contact = () => {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-semibold mb-6">Mari Terhubung</h3>
             <p className="text-gray-600 mb-8">
-              Tertarik untuk bekerja sama atau ingin mengetahui lebih lanjut tentang layanan saya? 
+              Tertarik untuk bekerja sama atau ingin mengetahui lebih lanjut tentang saya? 
               Jangan ragu untuk menghubungi saya melalui berbagai channel di bawah ini.
             </p>
             
@@ -90,11 +90,12 @@ const Contact = () => {
           <div className="md:col-span-3">
             <div className="bg-white rounded-xl p-6 shadow-lg animate-slide-up">
               <h3 className="text-2xl font-semibold mb-6">Kirim Pesan</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form className="space-y-6" action="https://formspree.io/f/mblodzvy" method="POST">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-gray-700">Nama</label>
                     <Input 
+                      name="name"
                       id="name" 
                       placeholder="Nama Anda" 
                       required 
@@ -104,6 +105,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium text-gray-700">Email</label>
                     <Input 
+                      name="email"
                       id="email" 
                       placeholder="email@example.com" 
                       type="email" 
@@ -116,6 +118,7 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium text-gray-700">Subjek</label>
                   <Input 
+                    name="subject"
                     id="subject" 
                     placeholder="Subjek pesan Anda" 
                     required 
@@ -126,6 +129,7 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-gray-700">Pesan</label>
                   <Textarea 
+                    name="message"
                     id="message" 
                     placeholder="Tulis pesan Anda di sini..." 
                     required 

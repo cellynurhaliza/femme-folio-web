@@ -5,32 +5,94 @@ import { Award } from 'lucide-react';
 const Certificates = () => {
   const certificates = [
     {
-      title: "UI/UX Design Professional",
-      issuer: "Google Design Academy",
-      date: "Oktober 2022",
-      icon: "🎨",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=600"
+      title: "Belajar Dasar Pemrograman Web",
+      issuer: "Dicoding",
+      date: "November 2022",
+      image: "/img/sertif-web.png"
     },
     {
-      title: "Frontend Web Development",
-      issuer: "Udemy",
-      date: "Juni 2021",
-      icon: "💻",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=600"
+      title: "Frontend - HTML",
+      issuer: "MySkill",
+      date: "Mei 2023",
+      image: "/img/sertif-html.png"
     },
     {
-      title: "React JS Expert",
-      issuer: "Coursera",
-      date: "Maret 2020",
-      icon: "⚛️",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=600"
+      title: "Frontend - CSS",
+      issuer: "MySkill",
+      date: "Mei 2023",
+      image: "/img/sertif-css.png"
     },
     {
-      title: "Design Thinking Workshop",
-      issuer: "IDEO",
-      date: "Mei 2019",
-      icon: "🧠",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600"
+      title: "Meneliti Karier sebagai Software Developer",
+      issuer: "Dicoding",
+      date: "Juli 2023",
+      image: "/img/sertif-meneliti.png"
+    },
+    {
+      title: "Belajar Dasar Git dengan GitHub",
+      issuer: "Dicoding",
+      date: "Agustus 2023",
+      image: "/img/sertif-git.png"
+    },
+    {
+      title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+      issuer: "Dicoding",
+      date: "Agustus 2023",
+      image: "/img/sertif-software.png"
+    },
+    {
+      title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
+      issuer: "Dicoding",
+      date: "Agustus 2023",
+      image: "/img/sertif-logic.png"
+    },
+    {
+      title: "Front-end Development with The Progressive JavaScript Framework Vue.js",
+      issuer: "PT Wan Teknologi",
+      date: "Oktober 2023",
+      image: "/img/sertif-wantek.jpg"
+    },
+    {
+      title: "Backend Development with JavaScript Framework",
+      issuer: "PT Laskar Teknologi Mulia (CyberLabs)",
+      date: "November 2023",
+      image: "/img/sertif-cyberlabs.png"
+    },
+    {
+      title: "Certificate On The Job Training",
+      issuer: "PT Hexaon Business Mitrasindo",
+      date: "Juni 2024",
+      image: "/img/sertif-pkl.jpg"
+    },
+    {
+      title: "Web Development Fundamentals",
+      issuer: "IBM SkillsBuild",
+      date: "Oktober 2024",
+      image: "/img/sertif-fundamental.png"
+    },
+    {
+      title: "Unity Essentials Pathway",
+      issuer: "Unity Technologies",
+      date: "November 2024",
+      image: "/img/sertif-unity.png"
+    },
+    {
+      title: "IGDX Career Seminar 'Career Guidance For Aspiring Game Developer'",
+      issuer: "Kementerian Komunikasi dan Informatika",
+      date: "Desember 2024",
+      image: "/img/sertif-igdx.png"
+    },
+    {
+      title: "Python - Data Science",
+      issuer: "SRC Telkom Indonesia x Sanbercode",
+      date: "Jan 2025",
+      image: "/img/sertif-digi.png"
+    },
+    {
+      title: "Python for Data Analysis",
+      issuer: "MySkill",
+      date: "April 2025",
+      image: "/img/sertif-data.png"
     },
   ];
 
@@ -60,19 +122,12 @@ const Certificates = () => {
                 />
               </div>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-2xl">{certificate.icon}</span>
                 <h3 className="text-xl font-semibold">{certificate.title}</h3>
               </div>
               <p className="text-gray-600 text-sm mb-1">{certificate.issuer}</p>
               <p className="text-primary text-sm font-medium">{certificate.date}</p>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-10 text-center">
-          <p className="text-gray-600">
-            Selain sertifikat di atas, saya juga mengikuti berbagai workshop dan pelatihan untuk terus mengembangkan keterampilan saya.
-          </p>
         </div>
       </div>
     </section>

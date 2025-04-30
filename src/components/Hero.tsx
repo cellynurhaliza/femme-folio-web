@@ -10,10 +10,10 @@ const Hero = () => {
         <div className="text-center max-w-3xl mx-auto animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight">
             <span className="block">Halo, Saya</span> 
-            <span className="text-gradient">Nama Saya</span>
+            <span className="text-gradient">Celly Nurhaliza</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-            Professional Developer & Designer dengan pengalaman dalam membangun produk digital yang berkualitas dan berbasis user experience
+            Software Developer
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="rounded-full px-8">
@@ -27,7 +27,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#about" className="text-gray-500 flex flex-col items-center">
-          <span className="text-sm mb-2">Scroll</span>
+          <span className="text-sm mb-2">Gulir</span>
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="24" 
