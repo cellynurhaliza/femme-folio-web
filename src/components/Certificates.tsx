@@ -8,25 +8,29 @@ const Certificates = () => {
       title: "UI/UX Design Professional",
       issuer: "Google Design Academy",
       date: "Oktober 2022",
-      icon: "🎨"
+      icon: "🎨",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=600"
     },
     {
       title: "Frontend Web Development",
       issuer: "Udemy",
       date: "Juni 2021",
-      icon: "💻"
+      icon: "💻",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=600"
     },
     {
       title: "React JS Expert",
       issuer: "Coursera",
       date: "Maret 2020",
-      icon: "⚛️"
+      icon: "⚛️",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=600"
     },
     {
       title: "Design Thinking Workshop",
       issuer: "IDEO",
       date: "Mei 2019",
-      icon: "🧠"
+      icon: "🧠",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600"
     },
   ];
 
@@ -48,10 +52,17 @@ const Certificates = () => {
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all group hover:-translate-y-1 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4">
-                <span className="text-4xl">{certificate.icon}</span>
+              <div className="mb-4 aspect-video rounded-lg overflow-hidden">
+                <img 
+                  src={certificate.image} 
+                  alt={certificate.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{certificate.title}</h3>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-2xl">{certificate.icon}</span>
+                <h3 className="text-xl font-semibold">{certificate.title}</h3>
+              </div>
               <p className="text-gray-600 text-sm mb-1">{certificate.issuer}</p>
               <p className="text-primary text-sm font-medium">{certificate.date}</p>
             </div>

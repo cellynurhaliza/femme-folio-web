@@ -1,8 +1,16 @@
 
 import React from 'react';
-import { User } from 'lucide-react';
+import { User, Code, Palette } from 'lucide-react';
 
 const About = () => {
+  const skills = [
+    { name: "UI/UX Design", icon: <Palette className="w-4 h-4" />, level: 90 },
+    { name: "Frontend Dev", icon: <Code className="w-4 h-4" />, level: 85 },
+    { name: "React", icon: <User className="w-4 h-4" />, level: 80 },
+    { name: "Figma", icon: <Palette className="w-4 h-4" />, level: 95 },
+    { name: "Tailwind CSS", icon: <Code className="w-4 h-4" />, level: 85 }
+  ];
+
   return (
     <section id="about" className="section-padding bg-white">
       <div className="container mx-auto">
@@ -23,12 +31,6 @@ const About = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-40 h-40 rounded-full border-8 border-white bg-secondary flex items-center justify-center">
-              <div className="text-center">
-                <span className="block text-xl font-semibold text-gray-800">5+</span>
-                <span className="text-sm text-gray-600">Tahun Pengalaman</span>
-              </div>
-            </div>
           </div>
           
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
@@ -36,7 +38,7 @@ const About = () => {
               Saya adalah <span className="text-gradient font-semibold">UI/UX Designer & Frontend Developer</span> yang berpengalaman
             </h3>
             <p className="text-gray-600 mb-6">
-              Saya memiliki pengalaman lebih dari 5 tahun dalam membangun produk digital yang 
+              Saya memiliki pengalaman dalam membangun produk digital yang 
               berkualitas dan berbasis user experience. Dengan latar belakang yang kuat dalam 
               desain dan pengembangan frontend, saya dapat membantu mewujudkan visi produk 
               digital Anda dari konsep hingga implementasi.
@@ -56,14 +58,24 @@ const About = () => {
               ))}
             </div>
             
-            <div className="flex flex-wrap gap-2">
-              {["UI/UX Design", "Frontend Dev", "React", "Figma", "Tailwind CSS"].map((skill) => (
-                <span 
-                  key={skill} 
-                  className="px-4 py-2 bg-secondary text-gray-800 rounded-full text-sm font-medium"
-                >
-                  {skill}
-                </span>
+            <div className="space-y-5 mt-8">
+              <h4 className="text-lg font-medium">Keahlian</h4>
+              {skills.map((skill, index) => (
+                <div key={index} className="space-y-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      {skill.icon}
+                      <span className="font-medium">{skill.name}</span>
+                    </div>
+                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                  </div>
+                  <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-primary rounded-full"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
