@@ -23,16 +23,14 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 gap-10 items-start">
         <div className="relative animate-slide-up w-full max-w-md mx-auto">
-  <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden bg-gradient-to-br from-secondary to-primary/20 flex items-center justify-center">
-    <img
-      src="public/img/foto-profesional.png"
-      alt="Profile"
-      className="w-full h-full object-cover rounded-2xl"
-    />
-  </div>
-</div>
-
-          
+          <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden bg-gradient-to-br from-secondary to-primary/20 flex items-center justify-center">
+            <img
+              src="/img/foto-profesional.png"
+              alt="Profile"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </div>
+        </div>
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-2xl font-medium mb-4">
               Halo,  <span className="text-gradient font-semibold">Salam kenal!</span>
