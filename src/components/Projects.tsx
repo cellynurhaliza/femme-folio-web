@@ -78,6 +78,12 @@ const Projects = () => {
     ? projects 
     : projects.filter(project => project.type === activeFilter);
 
+    const [showAll, setShowAll] = useState(false);
+
+    const visibleProjects = showAll
+      ? filteredProjects
+      : filteredProjects.slice(0, 6);
+    
   return (
     <section id="projects" className="section-padding bg-white">
       <div className="container mx-auto">
@@ -107,7 +113,7 @@ const Projects = () => {
         </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <div 
               key={index} 
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group animate-slide-up"
@@ -130,6 +136,17 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        {filteredProjects.length > 6 && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition">
+              {showAll ? 'Tampilkan Lebih Sedikit' : 'Tampilkan Lebih Banyak'}
+            </button>
+          </div>
+        )}
+
+
       </div>
     </section>
   );

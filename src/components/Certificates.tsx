@@ -1,8 +1,9 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Award } from 'lucide-react';
 
 const Certificates = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const certificates = [
     {
       title: "Belajar Dasar Pemrograman Web",
@@ -96,6 +97,8 @@ const Certificates = () => {
     },
   ];
 
+  const visibleCertificates = showAll ? certificates : certificates.slice(0, 8);
+
   return (
     <section id="certificates" className="section-padding bg-gray-50">
       <div className="container mx-auto">
@@ -108,7 +111,7 @@ const Certificates = () => {
         </div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {certificates.map((certificate, index) => (
+          {visibleCertificates.map((certificate, index) => (
             <div 
               key={index} 
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all group hover:-translate-y-1 animate-slide-up"
@@ -129,6 +132,17 @@ const Certificates = () => {
             </div>
           ))}
         </div>
+
+        {certificates.length > 8 && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition"
+            >
+              {showAll ? 'Tampilkan Lebih Sedikit' : 'Tampilkan Lebih Banyak'}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

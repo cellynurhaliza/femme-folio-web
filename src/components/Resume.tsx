@@ -5,10 +5,19 @@ import { FileText } from 'lucide-react';
 const Resume = () => {
   const education = [
     {
-      degree: "Pengembangan Perangkat Lunak dan Gim ",
+      degree: "Pengembangan Perangkat Lunak dan Gim",
       institution: "SMK Wikrama Bogor",
       period: "2022 - 2025",
       description: "Di sini saya mempelajari dasar-dasar pemrograman, pengembangan aplikasi, desain antarmuka, serta manajemen proyek perangkat lunak. Pendidikan ini membentuk fondasi kuat dalam keterampilan teknis dan problem solving yang saya miliki saat ini."
+    }
+  ];
+
+  const organization = [
+    {
+      degree: "Teknik Kepramukaan",
+      institution: "Organisasi Dewan Ambalan SMK Wikrama Bogor",
+      period: "2023 - 2024",
+      description: "Dewan Ambalan adalah organisasi yang menjadi motor penggerak kegiatan kepramukaan di tingkat ambalan pramuka penegak. Di Dewan Ambalan saya memiliki posisi sebagai Koordinator Teknik Kepramukaan (Tekpram), tugas utamanya adalah memastikan pelaksanaan teknis kegiatan kepramukaan berjalan lancar dan sesuai rencana. Saya pun sudah pernah mengikuti beberapa lomba kepramukaan dan mengikuti beberapa kepanitiaan di organisasi ini."
     }
   ];
 
@@ -31,12 +40,6 @@ const Resume = () => {
       period: "Okt 2024 - Des 2024",
       description: "Sebagai Social Media, Data Entry, dan Account Management diperusahaan individu, saya bertanggung jawab untuk mengelola engagement di media sosial dengan merespons komentar, mention, dan pesan untuk menjaga interaksi positif dengan audiens. Saya mampu bekerja sama dalam tim dan lingkungan baru dan saya mampu membagi waktu untuk bekerja dan bersekolah."
     },
-    {
-      position: "Teknik Kepramukaan",
-      company: "Organisasi Dewan Ambalan SMK Wikrama Bogor",
-      period: "2023 - 2024",
-      description: "Dewan Ambalan adalah organisasi yang menjadi motor penggerak kegiatan kepramukaan di tingkat ambalan pramuka penegak. Di Dewan Ambalan saya memiliki posisi sebagai Koordinator Teknik Kepramukaan (Tekpram), tugas utamanya adalah memastikan pelaksanaan teknis kegiatan kepramukaan berjalan lancar dan sesuai rencana. Saya pun sudah pernah mengikuti beberapa lomba kepramukaan dan mengikuti beberapa kepanitiaan di organisasi ini."
-    }
   ];
 
   const ResumeItem = ({ title, organization, period, description }) => (
@@ -62,7 +65,7 @@ const Resume = () => {
         
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">Pendidikan</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center md:text-left relative after:content-[''] after:block after:w-20 after:h-1 after:bg-primary after:mt-2 after:mx-auto md:after:mx-0">Pendidikan</h3>
             <div className="space-y-6">
               {education.map((item, index) => (
                 <ResumeItem
@@ -74,10 +77,23 @@ const Resume = () => {
                 />
               ))}
             </div>
+            <br />
+            <h3 className="text-2xl font-bold mb-6 text-center md:text-left relative after:content-[''] after:block after:w-20 after:h-1 after:bg-primary after:mt-2 after:mx-auto md:after:mx-0">Pengalaman Organisasi</h3>
+            <div className="space-y-6">
+              {organization.map((item, index) => (
+                <ResumeItem
+                  key={index}
+                  title={item.degree}
+                  organization={item.institution}
+                  period={item.period}
+                  description={item.description}
+                />
+              ))}
+            </div>
           </div>
-          
+
           <div>
-            <h3 className="text-2xl font-semibold mb-6 text-center md:text-left">Pengalaman</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center md:text-left relative after:content-[''] after:block after:w-20 after:h-1 after:bg-primary after:mt-2 after:mx-auto md:after:mx-0">Pengalaman</h3>
             <div className="space-y-6">
               {experience.map((item, index) => (
                 <ResumeItem

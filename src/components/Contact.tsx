@@ -35,7 +35,7 @@ const Contact = () => {
       icon: <Linkedin className="h-5 w-5" />,
       title: "LinkedIn",
       value: "Celly Nurhaliza",
-      link: "https://www.linkedin.com/in/celly-nurhaliza-5554a6270/"
+      link: "https://www.linkedin.com/in/celly-nurhaliza/"
     }
   ];
 
