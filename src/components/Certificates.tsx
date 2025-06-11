@@ -95,6 +95,18 @@ const Certificates = () => {
       date: "April 2025",
       image: "/img/sertif-data.png"
     },
+    {
+      title: "Frontend and Backend Integration",
+      issuer: "MySkill",
+      date: "May 2025",
+      image: "/img/integration.png"
+    },
+    {
+      title: "Webinar Game Developer 'Exploring the Role of a Game Artist: Foundation for Aspiring Creatives in the Game Industry'",
+      issuer: "CodeLamp",
+      date: "Juni 2025",
+      image: "/img/webinar-game.png"
+    },
   ];
 
   const visibleCertificates = showAll ? certificates : certificates.slice(0, 8);

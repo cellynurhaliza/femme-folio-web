@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-[0.03]"></div>
+      <div className="absolute inset-0 bg-[url('https://www.google.com/imgres?q=foto%20coding&imgurl=https%3A%2F%2Fonline.binus.ac.id%2Fwp-content%2Fuploads%2F2024%2F01%2FPerbedaan-Coding-dan-Programming.jpg&imgrefurl=https%3A%2F%2Fonline.binus.ac.id%2F2024%2F01%2F03%2Fperbedaan-coding-dan-programming-yang-wajib-diketahui%2F&docid=_tUKqaBcZbgwmM&tbnid=8K2g5cC2YSPw3M&vet=12ahUKEwjfkqW2q-iNAxXESmwGHQSlFHsQM3oFCIMBEAA..i&w=1920&h=1282&hcb=2&ved=2ahUKEwjfkqW2q-iNAxXESmwGHQSlFHsQM3oFCIMBEAA')] bg-cover bg-center opacity-[0.03]"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight">
@@ -13,14 +13,14 @@ const Hero = () => {
             <span className="text-gradient">Celly Nurhaliza</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-            Software Developer
+            Software Engineer
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="rounded-full px-8">
               <a href="#contact">Hubungi Saya</a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
-              <a href="#projects">Lihat Proyek</a>
+            <Button asChild size="lg" className="rounded-full px-8">
+              <a href="/img/CV_Celly Nurhaliza.pdf">Lihat CV</a>
             </Button>
           </div>
         </div>
